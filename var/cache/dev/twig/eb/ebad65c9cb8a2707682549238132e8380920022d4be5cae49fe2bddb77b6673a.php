@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* blog/list.html.twig */
+/* /blog/list.html.twig */
 class __TwigTemplate_d64f6d98f02426cc0c933c0557e73a407ca80c6bdf84801f9cab487dccac9af2 extends Template
 {
     private $source;
@@ -39,12 +39,12 @@ class __TwigTemplate_d64f6d98f02426cc0c933c0557e73a407ca80c6bdf84801f9cab487dcca
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "blog/list.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/blog/list.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "blog/list.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/blog/list.html.twig"));
 
-        $this->parent = $this->loadTemplate("blog/index.html.twig", "blog/list.html.twig", 1);
+        $this->parent = $this->loadTemplate("blog/index.html.twig", "/blog/list.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -77,7 +77,7 @@ class __TwigTemplate_d64f6d98f02426cc0c933c0557e73a407ca80c6bdf84801f9cab487dcca
 
     public function getTemplateName()
     {
-        return "blog/list.html.twig";
+        return "/blog/list.html.twig";
     }
 
     public function isTraitable()
@@ -96,6 +96,6 @@ class __TwigTemplate_d64f6d98f02426cc0c933c0557e73a407ca80c6bdf84801f9cab487dcca
 {% block content%}
         <p>list</p>
 {% endblock %}
-", "blog/list.html.twig", "/home/andrii/1/templates/blog/list.html.twig");
+", "/blog/list.html.twig", "/home/andrii/ETI_2.2_symfon/templates/blog/list.html.twig");
     }
 }

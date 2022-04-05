@@ -8,11 +8,28 @@
 {% block body %}
     <div>
         {% block links %}
-            <a href="{{ url('index')}}" title="Home">Homepage</a>
-            <a href="{{ url('list')}}" title="List">Article List</a>
-            <a href="{{ url('login')}}" title="Login">Login</a>
+            <a href="{{ url('index') }}" title="Home">Homepage</a>
+            <a href="{{ url('list') }}" title="List">Article List</a>
+            {% if is_granted('IS_AUTHENTICATED_FULLY')==false %}
+                <a href="{{ url('login') }}" title="login">Login</a>
+            {% endif %}
             <a href="{{ url('about')}}" title="About">About</a>
         {% endblock %}
+    </div>
+    <div>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <p>Welcome: {{ app.user.username }}</p>
+            <a href="{{ url('logout') }}" title="logout">Logout</a>
+        {% endif %}
+    </div>
+    <div>
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="flash-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
     </div>
     {% block content %}
 

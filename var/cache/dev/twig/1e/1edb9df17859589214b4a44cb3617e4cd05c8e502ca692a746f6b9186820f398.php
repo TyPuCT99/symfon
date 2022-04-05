@@ -55,7 +55,7 @@ class __TwigTemplate_85ec54191b7be51198a0d9f580099f340e54f045999bab5b7e55fbd11e0
 ";
         // line 8
         $this->displayBlock('body', $context, $blocks);
-        // line 21
+        // line 38
         echo "</body>
 </html>";
         
@@ -102,10 +102,59 @@ class __TwigTemplate_85ec54191b7be51198a0d9f580099f340e54f045999bab5b7e55fbd11e0
         ";
         // line 10
         $this->displayBlock('links', $context, $blocks);
-        // line 16
+        // line 18
+        echo "    </div>
+    <div>
+        ";
+        // line 20
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 21
+            echo "            <p>Welcome: ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "username", [], "any", false, false, false, 21), "html", null, true);
+            echo "</p>
+            <a href=\"";
+            // line 22
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("logout");
+            echo "\" title=\"logout\">Logout</a>
+        ";
+        }
+        // line 24
+        echo "    </div>
+    <div>
+        ";
+        // line 26
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 26, $this->source); })()), "flashes", [], "any", false, false, false, 26));
+        foreach ($context['_seq'] as $context["label"] => $context["messages"]) {
+            // line 27
+            echo "            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($context["messages"]);
+            foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+                // line 28
+                echo "                <div class=\"flash-";
+                echo twig_escape_filter($this->env, $context["label"], "html", null, true);
+                echo "\">
+                    ";
+                // line 29
+                echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+                echo "
+                </div>
+            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 32
+            echo "        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['label'], $context['messages'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 33
         echo "    </div>
     ";
-        // line 17
+        // line 34
         $this->displayBlock('content', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -133,12 +182,17 @@ class __TwigTemplate_85ec54191b7be51198a0d9f580099f340e54f045999bab5b7e55fbd11e0
         // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("list");
         echo "\" title=\"List\">Article List</a>
-            <a href=\"";
+            ";
         // line 13
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("login");
-        echo "\" title=\"Login\">Login</a>
-            <a href=\"";
-        // line 14
+        if ((0 === twig_compare($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY"), false))) {
+            // line 14
+            echo "                <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("login");
+            echo "\" title=\"login\">Login</a>
+            ";
+        }
+        // line 16
+        echo "            <a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("about");
         echo "\" title=\"About\">About</a>
         ";
@@ -150,7 +204,7 @@ class __TwigTemplate_85ec54191b7be51198a0d9f580099f340e54f045999bab5b7e55fbd11e0
 
     }
 
-    // line 17
+    // line 34
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -160,7 +214,7 @@ class __TwigTemplate_85ec54191b7be51198a0d9f580099f340e54f045999bab5b7e55fbd11e0
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 18
+        // line 35
         echo "
     ";
         
@@ -178,7 +232,7 @@ class __TwigTemplate_85ec54191b7be51198a0d9f580099f340e54f045999bab5b7e55fbd11e0
 
     public function getDebugInfo()
     {
-        return array (  164 => 18,  154 => 17,  142 => 14,  138 => 13,  134 => 12,  129 => 11,  119 => 10,  109 => 17,  106 => 16,  104 => 10,  101 => 9,  91 => 8,  80 => 4,  70 => 3,  59 => 21,  57 => 8,  53 => 6,  51 => 3,  47 => 1,);
+        return array (  218 => 35,  208 => 34,  195 => 16,  189 => 14,  187 => 13,  183 => 12,  178 => 11,  168 => 10,  158 => 34,  155 => 33,  149 => 32,  140 => 29,  135 => 28,  130 => 27,  126 => 26,  122 => 24,  117 => 22,  112 => 21,  110 => 20,  106 => 18,  104 => 10,  101 => 9,  91 => 8,  80 => 4,  70 => 3,  59 => 38,  57 => 8,  53 => 6,  51 => 3,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -193,17 +247,34 @@ class __TwigTemplate_85ec54191b7be51198a0d9f580099f340e54f045999bab5b7e55fbd11e0
 {% block body %}
     <div>
         {% block links %}
-            <a href=\"{{ url('index')}}\" title=\"Home\">Homepage</a>
-            <a href=\"{{ url('list')}}\" title=\"List\">Article List</a>
-            <a href=\"{{ url('login')}}\" title=\"Login\">Login</a>
+            <a href=\"{{ url('index') }}\" title=\"Home\">Homepage</a>
+            <a href=\"{{ url('list') }}\" title=\"List\">Article List</a>
+            {% if is_granted('IS_AUTHENTICATED_FULLY')==false %}
+                <a href=\"{{ url('login') }}\" title=\"login\">Login</a>
+            {% endif %}
             <a href=\"{{ url('about')}}\" title=\"About\">About</a>
         {% endblock %}
+    </div>
+    <div>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <p>Welcome: {{ app.user.username }}</p>
+            <a href=\"{{ url('logout') }}\" title=\"logout\">Logout</a>
+        {% endif %}
+    </div>
+    <div>
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class=\"flash-{{ label }}\">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
     </div>
     {% block content %}
 
     {% endblock %}
 {% endblock %}
 </body>
-</html>", "blog/index.html.twig", "/home/andrii/1/templates/blog/index.html.twig");
+</html>", "blog/index.html.twig", "/home/andrii/ETI_2.2/templates/blog/index.html.twig");
     }
 }

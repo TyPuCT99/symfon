@@ -105,6 +105,6 @@ class __TwigTemplate_71eef4f12d5e762e5a567f0c6e5ba9685cf188e97a4614caf6df7f6a3b4
         <h4>LOGIN:</h4>
         <h4>PASSWORD:</h4>
     </div>
-{% endblock %}", "blog/login.html.twig", "/home/andrii/1/templates/blog/login.html.twig");
+{% endblock %}", "blog/login.html.twig", "/home/andrii/ETI_2.2_symfon/templates/blog/login.html.twig");
     }
 }
